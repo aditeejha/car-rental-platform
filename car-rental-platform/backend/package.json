@@ -1,0 +1,41 @@
+{
+  "name": "car-rental-backend",
+  "version": "1.0.0",
+  "description": "Trust-First Offline Car Rental Platform — Express API",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "dev:mem": "node src/dev-server.js",
+    "migrate": "node src/db/migrate.js",
+    "seed": "node src/db/seed.js",
+    "worker": "node src/workers/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "joi": "^17.13.1",
+    "ioredis": "^5.4.1",
+    "bullmq": "^5.7.0",
+    "express-rate-limit": "^7.2.0",
+    "rate-limit-redis": "^4.2.0",
+    "multer": "^1.4.5-lts.1",
+    "@aws-sdk/client-s3": "^3.583.0",
+    "@aws-sdk/s3-request-presigner": "^3.583.0",
+    "uuid": "^9.0.1",
+    "axios": "^1.6.8",
+    "openai": "^4.47.0",
+    "pino": "^9.0.0",
+    "pino-http": "^10.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

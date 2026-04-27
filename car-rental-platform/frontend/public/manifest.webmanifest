@@ -1,0 +1,13 @@
+{
+  "name": "Trustly Cars",
+  "short_name": "Trustly",
+  "description": "Trust-First Offline Car Rental",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f8fb",
+  "theme_color": "#1f54e6",
+  "icons": [
+    { "src": "https://placehold.co/192x192/1f54e6/ffffff?text=T", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://placehold.co/512x512/1f54e6/ffffff?text=T", "sizes": "512x512", "type": "image/png" }
+  ]
+}

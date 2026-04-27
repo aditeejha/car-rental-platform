@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #04060f;
+  --ink: #e5e7eb;
+}
+html, body {
+  background:
+    radial-gradient(1200px 600px at 0% -10%, rgba(47,107,255,0.15), transparent 60%),
+    radial-gradient(900px 500px at 100% 110%, rgba(15,31,85,0.45), transparent 60%),
+    #04060f;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba(47,107,255,0.45); color: white; }
+
+.card {
+  @apply bg-ink-800/80 backdrop-blur rounded-2xl shadow-soft border border-ink-600;
+}
+.card-raised {
+  @apply bg-ink-700 rounded-2xl shadow-soft border border-ink-500;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-500 shadow-glow;
+}
+.btn-ghost {
+  @apply btn bg-ink-700 text-slate-100 hover:bg-ink-600 border border-ink-600;
+}
+.btn-light {
+  @apply btn bg-white text-ink-900 hover:bg-slate-100;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-full bg-ink-700 px-3 py-1 text-xs font-medium text-slate-200 border border-ink-600;
+}
+.chip-light {
+  @apply inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-slate-100;
+}
+.input {
+  @apply w-full rounded-xl border border-ink-600 bg-ink-800/60 text-slate-100 placeholder-slate-500
+         px-3.5 py-2.5 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30;
+}
+.input-light {
+  @apply w-full rounded-xl border border-slate-200 bg-white text-slate-900
+         placeholder-slate-400 px-3.5 py-2.5 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100;
+}
+
+/* Slim scrollbars in modals */
+.scroll-thin::-webkit-scrollbar { width: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #232b58; border-radius: 4px; }
